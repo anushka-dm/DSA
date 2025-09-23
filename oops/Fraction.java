@@ -1,3 +1,4 @@
+
 public class Fraction {
 
 	public int numerator;
@@ -64,6 +65,13 @@ public class Fraction {
 		this.numerator = this.numerator * f2.denominator + this.denominator * f2.numerator;
 		this.denominator = this.denominator * f2.denominator;
 		simpliyfy();
+	}
+
+	public static Fraction add(Fraction f1, Fraction f2) {
+		int newNum = f1.numerator * f2.denominator + f1.denominator * f2.numerator;
+		int newDen = f1.denominator * f2.denominator;
+		Fraction f3 = new Fraction(newNum, newDen);
+		return f3;
 	}
 
 }
