@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class LinkListUse {
 	public static Node<Integer> createLinkList() {
 		Node<Integer> n1 = new Node<Integer>(10);
@@ -10,17 +12,31 @@ public class LinkListUse {
 		return n1;
 	}
 
-	public static void main(String[] args) {
-		Node<Integer> head = createLinkList();
-		System.out.println(head);
+	// Print the linked list
+	public static void print(Node<Integer> head) {
 		Node<Integer> currentLink = head;
-		System.out.println(head.data);
-		System.out.println(head.next.data);
-		System.out.println(head.next.next.data);
-		// Print the linked list
+
 		while (currentLink != null) {
 			System.out.println(currentLink.data);
 			currentLink = currentLink.next;
 		}
+	}
+
+	// increment all elements in linked list
+	public static void increment(Node<Integer> head) {
+		Node<Integer> temp = head;
+		while (temp != null) {
+			temp.data++;
+			temp = temp.next;
+		}
+	}
+
+	public static void main(String[] args) {
+		Node<Integer> head = createLinkList();
+		System.out.println(head);
+		print(head);
+		increment(head);
+		print(head);
+
 	}
 }
