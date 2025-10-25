@@ -1,3 +1,6 @@
+
+
+
 import java.util.LinkedList;
 
 public class LinkListUse {
@@ -38,5 +41,7 @@ public class LinkListUse {
 		increment(head);
 		print(head);
 
+		Node<Integer> newHead = InsetNode.insertNode(head, 1, 100);
+		print(newHead);
 	}
 }
