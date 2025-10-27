@@ -6,6 +6,8 @@ public class RecurisveLL {
 
 		System.out.print(head.data + " ");
 		printRecursion(head.next);
+		// Printing after the call prints the list in the reverse order
+		// System.out.print(head.data + " ");
 	}
 
 	public static void main(String[] args) {
